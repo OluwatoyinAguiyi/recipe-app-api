@@ -23,7 +23,7 @@ def create_recipe(user, **params):
         'title': 'Sample recipe title',
         'time_minutes': 22,
         'price': Decimal('5.25'),
-        'description': 'Sample decsription',
+        'description': 'Sample description',
         'link': 'http://example.com/recipe.pdf',
     }
     defaults.update(params)
@@ -45,7 +45,7 @@ class PublicRecipeAPITests(TestCase):
         self.assertEqual(res.status_code, status.HTTP_401_UNAUTHORIZED)
 
 
-class PRivateRecipeApiTests(TestCase):
+class PrivateRecipeApiTests(TestCase):
     """Test authenticated API requests"""
 
     def setUp(self):
